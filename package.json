@@ -1,0 +1,35 @@
+{
+  "name": "spdy-stream-muxer",
+  "version": "0.0.0",
+  "description": "Abstraction on top of spdy-transport, implementing the abstract-stream-muxer interface",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diasdavid/node-spdy-stream-muxer.git"
+  },
+  "keywords": [
+    "SPDY",
+    "Stream",
+    "Streams",
+    "Muxer",
+    "Flow",
+    "Control",
+    "BackPressure"
+  ],
+  "author": "David Dias <daviddias@ipfs.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diasdavid/node-spdy-stream-muxer/issues"
+  },
+  "homepage": "https://github.com/diasdavid/node-spdy-stream-muxer",
+  "dependencies": {
+    "spdy-transport": "indutny/spdy-transport"
+  },
+  "devDependencies": {
+    "standard": "^4.5.3",
+    "tape": "^4.0.0"
+  }
+}

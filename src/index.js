@@ -23,7 +23,7 @@ function Connection (conn) {
 
   self.dialStream = function (callback) {
     conn.request({
-      method: 'GET',
+      method: 'POST',
       path: '/',
       headers: {}
     }, callback)

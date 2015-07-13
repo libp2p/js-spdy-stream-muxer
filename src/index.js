@@ -13,6 +13,7 @@ function SpdyStreamMuxer () {
         protocol: 'spdy',
         isServer: isListener
     })
+    conn.start(3.1)
     return new Connection(conn)
   }
 }

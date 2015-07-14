@@ -10,8 +10,8 @@ function SpdyStreamMuxer () {
 
   self.attach = function (transport, isListener, callback) {
     var conn = spdy.connection.create(transport, {
-        protocol: 'spdy',
-        isServer: isListener
+      protocol: 'spdy',
+      isServer: isListener
     })
     conn.start(3.1)
     return new Connection(conn)

@@ -19,7 +19,7 @@ var spdyStreamMuxer = require('spdy-stream-muxer')
 
 var dialer = new spdyStreamMuxer()
 
-var connDialer = dialer.attach(pair, false)
+var connDialer = dialer.attach(socket, false)
 
 connDialer.dialStream(function (err, stream) {
   t.ifError(err, 'Should not throw')
@@ -33,7 +33,7 @@ var spdyStreamMuxer = require('spdy-stream-muxer')
 
 var listener = new spdyStreamMuxer()
 
-var connListener = listener.attach(pair.other, true)
+var connListener = listener.attach(socket, true)
 
 connListener.on('stream', function (stream) {
   t.pass('got stream')

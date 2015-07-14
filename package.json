@@ -4,7 +4,8 @@
   "description": "Abstraction on top of spdy-transport, implementing the abstract-stream-muxer interface",
   "main": "src/index.js",
   "scripts": {
-    "test": "node tests/test.js"
+    "test": "node tests/test.js",
+    "codestyle": "./node_modules/.bin/standard --format"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,13 @@
     "spdy-transport": "indutny/spdy-transport"
   },
   "devDependencies": {
+    "abstract-stream-muxer": "^0.1.0",
+    "precommit-hook": "^3.0.0",
     "standard": "^4.5.3",
     "tape": "^4.0.0"
-  }
+  },
+  "pre-commit": [
+    "codestyle",
+    "test"
+  ]
 }

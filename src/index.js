@@ -1,6 +1,7 @@
 var spdy = require('spdy-transport')
 var EventEmitter = require('events').EventEmitter
 var util = require('util')
+var DuplexPassThrough = require('duplex-passthrough')
 
 exports = module.exports = SpdyStreamMuxer
 util.inherits(Connection, EventEmitter)
@@ -22,11 +23,24 @@ function Connection (conn) {
   var self = this
 
   self.dialStream = function (callback) {
+    var ds = new DuplexPassThrough()
+
     conn.request({
       method: 'POST',
       path: '/',
       headers: {}
-    }, callback)
+    }, function (err, stream) {
+      if (err) {
+        ds.emit('err', err)
+        if (callback) { callback(err) }
+        return
+      }
+      ds.wrapStream(stream)
+      ds.emit('ready')
+      if (callback) { callback(null, stream) }
+    })
+
+    return ds
   }
 
   conn.on('stream', function (stream) {

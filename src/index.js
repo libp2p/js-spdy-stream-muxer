@@ -9,7 +9,7 @@ util.inherits(Connection, EventEmitter)
 function SpdyStreamMuxer () {
   var self = this
 
-  self.attach = function (transport, isListener, callback) {
+  self.attach = function (transport, isListener) {
     var conn = spdy.connection.create(transport, {
       protocol: 'spdy',
       isServer: isListener
@@ -37,7 +37,7 @@ function Connection (conn) {
       }
       ds.wrapStream(stream)
       ds.emit('ready')
-      if (callback) { callback(null, stream) }
+      if (callback) { callback(null, ds) }
     })
 
     return ds

@@ -27,11 +27,10 @@
   },
   "homepage": "https://github.com/diasdavid/node-spdy-stream-muxer",
   "dependencies": {
-    "duplex-passthrough": "^1.0.2",
-    "spdy-transport": "^1.0.0-rc7"
+    "spdy-transport": "^1.0.0-rc8"
   },
   "devDependencies": {
-    "abstract-stream-muxer": "^0.2.2",
+    "abstract-stream-muxer": "^0.2.3",
     "precommit-hook": "^3.0.0",
     "standard": "^4.5.3",
     "tape": "^4.0.0"

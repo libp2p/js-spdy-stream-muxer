@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/diasdavid/node-spdy-stream-muxer",
   "dependencies": {
-    "spdy-transport": "^1.0.0-rc8"
+    "spdy-transport": "^1.0.0-rc9"
   },
   "devDependencies": {
     "abstract-stream-muxer": "^0.2.3",

@@ -45,6 +45,8 @@ function Connection (conn) {
 
   conn.on('stream', function (stream) {
     stream.respond(200, {})
+    stream.destroy = stream.abort
+
     self.emit('stream', stream)
   })
 

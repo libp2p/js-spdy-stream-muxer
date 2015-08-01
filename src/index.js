@@ -55,4 +55,8 @@ function Connection (conn) {
   conn.on('error', function (err) {
     self.emit('error', err)
   })
+
+  self.end = function (cb) {
+    conn.end(cb)
+  }
 }

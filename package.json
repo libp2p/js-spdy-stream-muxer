@@ -1,6 +1,6 @@
 {
   "name": "spdy-stream-muxer",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Abstraction on top of spdy-transport, implementing the abstract-stream-muxer interface",
   "main": "src/index.js",
   "scripts": {

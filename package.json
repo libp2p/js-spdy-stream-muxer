@@ -6,9 +6,12 @@
   "scripts": {
     "test": "node tests/test.js",
     "codestyle": "./node_modules/.bin/standard --format",
-    "lint": "jshint .",
-    "validate": "npm ls"
+    "lint": "./node_modules/.bin/standard"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/diasdavid/node-spdy-stream-muxer.git"
@@ -34,8 +37,8 @@
   },
   "devDependencies": {
     "abstract-stream-muxer": "^0.2.3",
-    "precommit-hook": "^3.0.0",
-    "standard": "^4.5.3",
+    "pre-commit": "^1.1.1",
+    "standard": "^5.3.1",
     "tape": "^4.0.1"
   },
   "pre-commit": [

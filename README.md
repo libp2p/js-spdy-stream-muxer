@@ -1,15 +1,24 @@
 spdy-stream-muxer JavaScript implementation
-========================================
+==========================================
 
-[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io) [![](https://img.shields.io/badge/freejs-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
+# **DEPRECATED**
+
+## Use [libp2p-spdy](https://github.com/libp2p/js-libp2p-spdy) instead
+
+
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io) [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
 
 > Abstraction on top of spdy-transport, implementing the abstract-stream-muxer interface
 
-[![](https://github.com/diasdavid/abstract-stream-muxer/blob/master/img/badge.png)](https://github.com/diasdavid/abstract-stream-muxer)
+[![](https://github.com/libp2p/interface-stream-muxer/blob/master/img/badge.png)](https://github.com/diasdavid/abstract-stream-muxer)
 
 # Usage
 
-spdy-stream-muxer follows the [abstract-stream-muxer API](https://github.com/diasdavid/abstract-stream-muxer#api)
+spdy-stream-muxer follows the [abstract-stream-muxer API](https://github.com/libp2p/interface-stream-muxer)
 
 # Example
 
